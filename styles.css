@@ -1,0 +1,256 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    scrollbar-width: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: url(https://data.1freewallpapers.com/download/gradient-green-texture-background-2880x1800.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+header {
+    height: 100vh;
+    width: 100%;
+    color: #FFFFFF;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+header .content h1 {
+    font: 400 6rem Bevan;
+    text-align: center;
+    margin: 8rem 0 1rem;
+    padding: 0;
+    line-height: 6rem;
+    text-shadow: 0 0 10px #012025;
+}
+
+header .content h2, header .content h3 {
+    font: 400 1.5rem Poly;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+header .bg {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    justify-content: space-between;
+}
+
+header .bg img {
+    width: 100%;
+    max-width: 550px;
+    transition: 2s;
+    animation-name: entrada;
+    animation-duration: 2s;
+    left: -100px
+}
+
+@keyframes entrada {
+    from {left: -100px}
+    to {left: 0}
+}
+
+header .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    justify-content: center;
+}
+
+header .content div {
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+}
+
+button {
+    width: 18rem;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50px;
+    background: none;
+    color: #FFFFFF;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: all 0.5s;
+    overflow: hidden;
+    margin: 0 auto;
+    font: 400 1rem Poly;
+    font-weight: bolder;
+}
+
+button:hover{
+    text-shadow: 0 0 10px #012025;
+    box-shadow: 0 0 10px #012025;
+    background: #ffffff38;
+}
+
+nav {
+    width: 100%;
+    height: 4rem;
+    text-align: right;
+    padding-top: 1.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+nav a {
+    font: 400 1.3rem Poly;
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: auto 2rem;
+    border-bottom: 2px solid rgb(255, 255, 255, 0);
+    transition: .2s ease-in-out;
+}
+
+nav a:hover {
+    border-bottom: 2px solid rgb(255, 255, 255, 0.5);
+}
+
+#fazendas {
+    margin-top: 100vh;
+    padding: 2rem 0 0;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+}
+
+#fazendas iframe {
+    width: 100%;
+}
+
+iframe body, html, .player, .fallback {
+    height: auto !important;
+}
+
+#fazendas .card {
+    max-width: 900px;
+    height: 200px;
+    margin: auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 30% 60%;
+    column-gap: 2rem;
+    background: rgba(255, 255, 255, 0.514);
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+#fazendas .card p {
+    margin: 0 0 0.5rem;
+    text-align: left;
+    font: 400 1rem Poly;
+    color: #012025;
+    align-items: center;
+}
+
+#fazendas .card span {
+    line-height: 0.5rem;
+}
+
+#fazendas .card h1 {
+    margin: 0 0 0.5rem;
+    text-align: left;
+    font: 400 1.5rem Poly;
+    color: #ffffff;
+}
+
+#infos {
+    height: 100vh;
+    width: 100%;
+    padding: 2rem 0;
+}
+
+#infos h2, p {
+    font: 400 1.5rem Poly;
+    color: #ffffff;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+#infos iframe {
+    margin: 1rem 0;
+}
+
+#contato {
+    width: 100%;
+    height: 70vh;
+    justify-content: center;
+}
+
+#contato form {
+    width: 600px;
+    padding: 1rem;
+    margin: auto;
+    display: grid;
+}
+
+#contato form label {
+    font: 400 1rem Poly;
+    color: #ffffff;
+    margin: 0.5rem;
+}
+
+#contato form input {
+    max-width: 600px;
+    height: 0.8rem;
+    border: 1px solid #045157;
+    border-radius: 5px;
+    background: #ececec;
+    padding: 0.8rem;
+    font: 400 1rem Poly;
+}
+
+#contato form textarea {
+    max-width: 600px;
+    border: 1px solid #045157;
+    border-radius: 5px;
+    background: #ececec;
+    padding: 0.8rem;
+    font: 400 1rem Poly;
+}
+
+footer {
+    padding: 1rem 0;
+    width: 100%;
+    height: 20vh;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+}
