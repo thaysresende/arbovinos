@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Bevan&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poly&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://css.gg/css' rel='stylesheet'>
     <title>AR Bovinos</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 
@@ -32,22 +32,28 @@
         </div>
     </header>
     <div id="fazendas">
-        <div class="card">
-            <iframe src="https://player.vimeo.com/video/460667024" width="640" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-            <div>
-                <h1>Fazenda na rodovia de Amambai a Ponta Porã, 300 hectares</h1>
-                <p>220 HECTARES DE LAVOURA</p>
-                <p>PRONTA PARA PLANTIO</p>
-                <p>12KM DA RODOVIA</p>
+        <div class="cardContainer">
+            <div class="card">
+                <iframe src="https://player.vimeo.com/video/460667024" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                <div class="textcontent">
+                    <h1>FAZENDA NA RODOVIA DE AMAMBAI A PONTA PORÃ, 300 HECTARES</h1>
+                    <ul>
+                        <li>200ha de lavoura</li>
+                        <li>Pronta para plantio</li>
+                        <li>12km da rodovia</li>
+                    </ul>
+                </div>
             </div>
+        </div>        
+    </div>
+    <div id="center">
+        <div id="infos">
+            <h2>Localização</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1652.3954570583087!2d-55.22513312925959!3d-23.104648478372265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x948a16ace8c96965%3A0xedaa0fede56ba889!2sR.%20Gen.%20C%C3%A2mara%2C%20204%2C%20Amamba%C3%AD%20-%20MS%2C%2079990-000!5e0!3m2!1spt-BR!2sbr!4v1600797087094!5m2!1spt-BR!2sbr" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <p>Rua General Câmara 204, Vila Vargas</p>
+            <p>Amambai-MS</p>
         </div>
-    </div>
-    <div id="infos">
-        <h2>Localização</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1652.3954570583087!2d-55.22513312925959!3d-23.104648478372265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x948a16ace8c96965%3A0xedaa0fede56ba889!2sR.%20Gen.%20C%C3%A2mara%2C%20204%2C%20Amamba%C3%AD%20-%20MS%2C%2079990-000!5e0!3m2!1spt-BR!2sbr!4v1600797087094!5m2!1spt-BR!2sbr" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-        <p>Rua General Câmara 204, Vila Vargas</p>
-        <p>Amambai-MS</p>
-    </div>
+    </div>    
     <div id="contato">
         <form>
             <label>Nome</label>
@@ -61,6 +67,8 @@
 
             <label>Mensagem</label>
             <textarea></textarea>
+
+            <button id="form">Enviar</button>
         </form>
     </div>
     <footer>
