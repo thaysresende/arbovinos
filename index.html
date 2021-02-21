@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,53 +8,200 @@
     <link href="https://fonts.googleapis.com/css2?family=Poly&display=swap" rel="stylesheet">
     <link href='https://css.gg/css' rel='stylesheet'>
     <title>AR Bovinos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
 
 </head>
+
 <body>
     <nav>
-        <a href="#home">Home</a>
-        <a href="#fazendas">Fazendas</a>
-        <a href="#infos">Informações</a>
-        <a href="#contato">Contato</a>
-    </nav>  
-    <header id="home"> 
+        <label for="toggle">&#9776;</label>
+        <input type="checkbox" id="toggle" />
+        <div class="menu">
+            <a id="1" class="navigation inactive" href="#home">Home</a>
+            <a id="2" class="navigation inactive" href="#fazendas">Fazendas</a>
+            <a id="3" class="navigation inactive" href="#infos">Informações</a>
+            <a id="4" class="navigation inactive" href="#contato">Contato</a>
+        </div>
+    </nav>
+    <header id="home">
         <div class="bg">
             <img id="first" src="img1.png">
             <img id="second" src="img2.png">
         </div>
-        <div class="content">
+        <div class="Content">
             <h1>AR BOVINOS</h1>
             <h2>IMOBILIÁRIA E NEGÓCIOS AGROPECUÁRIOS</h2>
             <h3>CRECI: 3485-MS</h3>
             <div>
-                <a class="button" href="https://api.whatsapp.com/send?phone=556792825740">Entre em contato agora</a>
+                <a class="Button" href="https://api.whatsapp.com/send?phone=556792825740">Entre em contato agora</a>
             </div>
         </div>
     </header>
     <div id="fazendas">
-        <div class="cardContainer">
-            <div class="card">
-                <iframe src="https://player.vimeo.com/video/460667024" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                <div class="textcontent">
-                    <h1>FAZENDA NA RODOVIA DE AMAMBAI A PONTA PORÃ, 300 HECTARES</h1>
-                    <ul>
-                        <li>200ha de lavoura</li>
-                        <li>Pronta para plantio</li>
-                        <li>12km da rodovia</li>
-                    </ul>
+        <div id="modais">
+            <div class="modal fade" id="first-farm" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true" data-bs-dismiss="modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            ...
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Understood</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>        
+        </div>
+        <div class="cardContainer">
+            <div id="farm01" class="display cards">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="fazenda01.jpeg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+            <div id="farm02" class="cards">
+                <div id="carouselExampleControls2" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="fazenda02.jpeg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls2"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls2"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+            <div id="farm03" class="display cards">
+                <div id="carouselExampleControls3" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="fazenda01.jpeg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls3"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls3"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+            <div id="farm04" class="cards">
+                <div id="carouselExampleControls3" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="fazenda02.jpeg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls3"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls3"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="farm-cards">
+            <div id="01" class="farm">
+                <div class="card" style="width: 13rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text"><i class="bi bi-geo-alt-fill"></i></p>
+                        <p class="card-text"><i class="bi bi-bounding-box-circles"></i></p>
+                        <p><i class="bi bi-info-circle"></i></p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#first-farm">
+                            Mais
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="02" class="farm">
+                <div class="card" >
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text"><i class="bi bi-geo-alt-fill"></i></p>
+                        <p class="card-text"><i class="bi bi-bounding-box-circles"></i></p>
+                        <p><i class="bi bi-info-circle"></i></p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#first-farm">
+                            Mais
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="03" class="farm">
+                <div class="card" style="width: 13rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text"><i class="bi bi-geo-alt-fill"></i></p>
+                        <p class="card-text"><i class="bi bi-bounding-box-circles"></i></p>
+                        <p><i class="bi bi-info-circle"></i></p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#first-farm">
+                            Mais
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="04" class="farm">
+                <div class="card" style="width: 13rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text"><i class="bi bi-geo-alt-fill"></i></p>
+                        <p class="card-text"><i class="bi bi-bounding-box-circles"></i></p>
+                        <p><i class="bi bi-info-circle"></i></p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#first-farm">
+                            Mais
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div id="center">
         <div id="infos">
             <h2>Localização</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1652.3954570583087!2d-55.22513312925959!3d-23.104648478372265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x948a16ace8c96965%3A0xedaa0fede56ba889!2sR.%20Gen.%20C%C3%A2mara%2C%20204%2C%20Amamba%C3%AD%20-%20MS%2C%2079990-000!5e0!3m2!1spt-BR!2sbr!4v1600797087094!5m2!1spt-BR!2sbr" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1652.3954570583087!2d-55.22513312925959!3d-23.104648478372265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x948a16ace8c96965%3A0xedaa0fede56ba889!2sR.%20Gen.%20C%C3%A2mara%2C%20204%2C%20Amamba%C3%AD%20-%20MS%2C%2079990-000!5e0!3m2!1spt-BR!2sbr!4v1600797087094!5m2!1spt-BR!2sbr"
+                width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                tabindex="0"></iframe>
+            <p>Atendimento de Segunda à Sábado: 07:00h às 11:00h - 13:00h às 17:00h</p>
             <p>Rua General Câmara 204, Vila Vargas</p>
             <p>Amambai-MS</p>
         </div>
-    </div>    
+    </div>
     <div id="contato">
         <form>
             <label>Nome</label>
@@ -76,5 +224,44 @@
         <p>Atendimento de Segunda à Sábado: 07:00h às 11:00h - 13:00h às 17:00h</p>
         <p>Desenvolvido por Thays R. Achucarro | &copy; 2020</p>
     </footer>
+    <script>
+        function addActive() {
+            const inactives = document.querySelectorAll('.navigation');
+            inactives.forEach(inactive => {
+                inactive.classList.remove('active');
+                inactive.classList.add('inactive');
+            });
+            const active = document.getElementById(this.id);
+            active.classList.add('active');
+            active.classList.remove('inactive');
+        }
+
+        function showFarm() {
+            console.log(this);
+            const farms = document.querySelectorAll('.farm');
+            farms.forEach(farm => {
+                farm.classList.remove('active-card');
+            });
+            const showing = document.querySelectorAll('.cards');
+            showing.forEach(show => {
+                show.classList.remove('display');
+            });
+            const iden = 'farm' + this.id;
+            console.log(iden);
+            const exibe = document.getElementById(iden);
+            this.classList.add('active-card');
+            exibe.classList.add('display');
+        }
+
+        const keys = document.querySelectorAll('.navigation');
+        keys.forEach(key => key.addEventListener('click', addActive));
+
+        const farms = document.querySelectorAll('.farm');
+        farms.forEach(farm => farm.addEventListener('click', showFarm));
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

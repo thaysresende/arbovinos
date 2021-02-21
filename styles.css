@@ -1,3 +1,47 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -40,7 +84,7 @@ header {
     right: 0;
 }
 
-header .content h1 {
+header .Content h1 {
     font: 400 6rem Bevan;
     text-align: center;
     margin: 8rem 0 1rem;
@@ -49,7 +93,7 @@ header .content h1 {
     text-shadow: 0 0 10px #012025;
 }
 
-header .content h2, header .content h3 {
+header .Content h2, header .Content h3 {
     font: 400 1.5rem Poly;
     text-align: center;
     color: #FFFFFF;
@@ -63,6 +107,8 @@ header .bg {
     right: 0;
     left: 0;
     justify-content: center;
+    max-width: 1200px;
+    margin: auto;
 }
 
 header .bg img {
@@ -106,15 +152,14 @@ header .bg img {
     justify-content: center;
 } */
 
-header .content div {
+header .Content div {
     width: 100%;
     margin: auto;
     justify-content: center;
     display: flex;
 }
 
-.button, button {
-    width: 12rem;
+.Button, button {
     border: 2px solid rgb(255, 255, 255);
     border-radius: 50px;
     background: none;
@@ -127,13 +172,14 @@ header .content div {
     font-weight: bolder;
     text-decoration: none;
     text-align: center;
+    z-index: 2;
 }
 
-button {
-    width: 18rem;
+#contato button {
+    width: 12rem;
 }
 
-.button:hover, button:hover{
+.Button:hover, #contato button:hover{
     text-shadow: 0 0 10px #012025;
     box-shadow: 0 0 10px #012025;
     background: #ffffff38;
@@ -158,22 +204,32 @@ nav a {
     margin: auto 2rem;
     border-bottom: 2px solid rgb(255, 255, 255, 0);
     transition: .2s ease-in-out;
+    padding: 10px 15px;
 }
 
-nav a:hover {
+.inactive:hover {
+    color: #FFFFFF;
     border-bottom: 2px solid rgb(255, 255, 255, 0.5);
+}
+
+.active {
+    background: rgba(5, 116, 73, 0.466);
+    border-radius: 5px;
+    box-shadow: 1px 1px rgb(255, 255, 255);
+}
+
+.active:hover {
+    color: #ffffff;
 }
 
 #fazendas {
     margin-top: 100vh;
-    /* background-image: linear-gradient(to left bottom, #055c65, #34787f, #56969b, #77b5b7, #99d4d4, #a0dedd, #a7e7e7, #aef1f0, #9be6e7, #88dbdf, #73d1d7, #5dc6cf);
-    transform: skew(0deg, -3deg) translate(0, -45px); */
-    box-shadow: 0px 0px 10px #012025;
-    padding: 2rem 0 0;
-    height: 80vh;
+    height: 100vh;
     width: 100%;
     justify-content: center;
     align-self: center;
+    display: flex;
+    padding: 2rem 0 2rem;
 }
 
 #fazendas iframe {
@@ -188,28 +244,69 @@ iframe body, html, .player, .fallback {
     justify-content: center;
 }
 
-#fazendas .card {
+#fazendas .cards {
     max-width: 800px;
-    height: 300px;
+    height: 455px;
     margin: auto;
-    display: grid;
+    position: absolute;
+    left: 0;
+    right: 0;
     justify-content: center;
     align-items: center;
-    grid-template-columns: 30% 70%;
-    column-gap: 2rem;
-    background: rgba(252, 252, 252, 0.966);
+    background: rgba(252, 252, 252, 0.877);
     border-radius: 2px;
-    padding: 1rem;
-    transform: translateX(53px);
+    padding: 5px;
     box-shadow: 0px 0px 10px #012025;
-    /* transform: skew(0deg, 3deg) translate(0, 45px); */
+    display: none;
 }
 
-#fazendas .card iframe {
+.display {
+    display: block !important;
+}
+
+.active-card {
+    box-shadow: 0px 0px 10px #012025;
+    transition: all 0.3s ease;
+    transform: scale(1.2);
+}
+
+.cards img {
+    width: 798px;
+    height: auto;
+    margin: auto;
+}
+
+#fazendas .cards iframe {
     margin-left: -105px;
     box-shadow: 0px 0px 10px #012025;
     width: 500px;
     height: 290px;
+}
+
+.farm-cards {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    width: 1000px;
+    justify-self: center;
+    justify-content: center;
+    margin: 15rem auto 0;
+    position: relative;
+    z-index: 2;    
+}
+
+.farm {
+    background-color: grey;
+    width: 190px;
+    justify-content: center;
+    margin: auto;
+    height: 100px;
+    transition: 0.2s;
+}
+
+.farm p {
+    color: black;
+    font-size: 15px;
+    text-align: left;
 }
 
 .textcontent {
@@ -217,7 +314,7 @@ iframe body, html, .player, .fallback {
     margin-left: 180px;
 }
 
-#fazendas .card li {
+#fazendas .cards li {
     margin: 0 0 0.5rem;
     text-align: left;
     font: 400 1rem Poly;
@@ -225,18 +322,18 @@ iframe body, html, .player, .fallback {
     align-items: center;
 }
 
-#fazendas .card span {
+#fazendas .cards span {
     line-height: 0.5rem;
 }
 
-#fazendas .card h1, h2 {
+#fazendas .cards h1, h2 {
     margin: 0 0 0.5rem;
     text-align: left;
     font: 400 1.5rem Poly;
     color: #012025;
 }
 
-#fazendas .card h2 {
+#fazendas .cards h2 {
     margin: -0.2rem 0 0 1rem;
     align-items: center;
     font-size: 1rem;
